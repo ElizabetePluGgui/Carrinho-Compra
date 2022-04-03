@@ -1,16 +1,19 @@
-import { Switch, Route } from "react-router-dom";
+import React, { FC } from "react";
 
-import Home from "./pages/Home";
-import Cart from "./pages/Cart";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const Routes = (): JSX.Element => {
-    return (
-        <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/cart" component={Cart} />
-        </Switch>
-    );
-};
+import "../src/styles/global";
 
-export default Routes;
+import { Home } from "../src/pages/Home";
+import { Cart } from "../src/pages/Cart";
 
+const Router: FC = () => (
+    <BrowserRouter>
+        <Routes>
+            <Route path="/login" element={<Home />} />
+            <Route path="*" element={<Cart />} />
+        </Routes>
+    </BrowserRouter>
+);
+
+export default Router;
