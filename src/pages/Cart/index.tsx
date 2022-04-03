@@ -1,5 +1,4 @@
 import React from "react";
-import { DialogProvider } from "muibox";
 
 import {
     MdDelete,
@@ -29,13 +28,12 @@ const Cart = (): JSX.Element => {
             price: formatPrice(product.price),
         };
     });
-    const total = formatPrice(
-        cart.reduce((sumTotal, product) => {
-            sumTotal += product.price * product.amount;
 
-            return sumTotal;
-        }, 0)
-    );
+    const total = cart.reduce((sumTotal, product) => {
+        sumTotal += product.price * product.amount;
+
+        return sumTotal;
+    }, 0);
 
     function handleProductIncrement(product: Product) {
         updateProductAmount({
@@ -145,17 +143,17 @@ const Cart = (): JSX.Element => {
             <footer>
                 <Total>
                     <span>TOTAL</span>
-                    <strong>{total}</strong>
+                    <strong>{formatPrice(total)}</strong>
                 </Total>
             </footer>
             <footer>
                 <div>
-                    <button type="submit">
-                        <DialogProvider>
+                    {total >= 10 && (
+                        <div id="btn-green">
                             "Parabéns, sua compra tem frete grátis !"
-                        </DialogProvider>
-                        Finalizar pedido
-                    </button>
+                        </div>
+                    )}
+                    <button type="submit">Finalizar pedido</button>
                 </div>
             </footer>
         </Container>

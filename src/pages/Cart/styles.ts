@@ -38,7 +38,7 @@ export const ProductTable = styled.table`
   thead th {
     color: #1a1a1a;   
     padding: 5px;
-    font-size: 36px;
+    font-size: 15px;
     text-align: center;
   }
 
@@ -79,6 +79,8 @@ export const ProductTable = styled.table`
     }
   }
 
+  
+
   button {
     background: none;
     border: 0;
@@ -105,6 +107,8 @@ export const ProductTable = styled.table`
 `;
 
 export const Total = styled.div`
+    
+
   display: flex;
   align-items: center;
   font-size: 24px;
@@ -117,4 +121,7 @@ export const Total = styled.div`
   strong {
     font-size: 24px;
   }
+  #btn-green {
+      color: red;
+    }
 `;
