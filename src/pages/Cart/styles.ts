@@ -105,10 +105,11 @@ export const ProductTable = styled.table`
     }
   }
 `;
+// export const Lbl-green = styled.div`
+//     color: red;
+// `;
 
 export const Total = styled.div`
-    
-
   display: flex;
   align-items: center;
   font-size: 24px;
@@ -121,7 +122,5 @@ export const Total = styled.div`
   strong {
     font-size: 24px;
   }
-  #btn-green {
-      color: red;
-    }
+  
 `;

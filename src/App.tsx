@@ -13,6 +13,7 @@ const App = (): JSX.Element => {
             <CartProvider>
                 <GlobalStyles />
                 <Header />
+
                 <Routes />
                 <ToastContainer autoClose={3000} />
             </CartProvider>
@@ -21,4 +22,3 @@ const App = (): JSX.Element => {
 };
 
 export default App;
-
