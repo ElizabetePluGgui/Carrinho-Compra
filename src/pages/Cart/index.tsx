@@ -149,10 +149,10 @@ const Cart = (): JSX.Element => {
             <footer>
                 <div className="Lbl-green">
                     {total >= 10 && (
-                        <div>"Parabéns, sua compra tem frete grátis !"</div>
+                        <div>"Parabéns, sua compra tem frete grátis!"</div>
                     )}
-                    <button type="submit">Finalizar pedido</button>
                 </div>
+                <button type="submit">Finalizar pedido</button>
             </footer>
         </Container>
     );

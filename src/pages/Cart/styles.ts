@@ -12,7 +12,27 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 
+    > .Lbl-green {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        background: rgba(2, 255, 137, 0.502);
+        color: #0e7700;       
+        border-radius: 220px;        
+        padding: 8px;
+
+        position:absolute;
+		left:48%;
+		top:50%;
+		margin-left:-100px;
+		margin-top: 60px;
+
+    }
+   
+    
     button {
       background: #0066ff;
       color: #fff;
@@ -21,7 +41,12 @@ export const Container = styled.div`
       padding: 12px 150px;
       font-weight: bold;
       font-size: 18px;
-      margin-left: 135px;
+     
+      position:absolute;
+	    left:48%;
+		top:50%;
+		margin-left:-170px;
+		margin-top: 100px;
 
       transition: background 0.2s;
 
@@ -79,8 +104,6 @@ export const ProductTable = styled.table`
     }
   }
 
-  
-
   button {
     background: none;
     border: 0;
@@ -105,22 +128,26 @@ export const ProductTable = styled.table`
     }
   }
 `;
-// export const Lbl-green = styled.div`
-//     color: red;
-// `;
 
 export const Total = styled.div`
   display: flex;
   align-items: center;
   font-size: 24px;
   margin-left: 120px;
+  
   span {
     color: #000;
     font-weight: bold;
     margin-right: 300px;
+   
   }
   strong {
     font-size: 24px;
+    margin: 220px;
+
+    position:absolute;
+	    left:49%;
+		top: 28%;
   }
   
 `;
